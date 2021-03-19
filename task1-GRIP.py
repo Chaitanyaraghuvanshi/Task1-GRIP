@@ -53,21 +53,3 @@ print("Predicted Score = {}".format(own_pred[0]))
 #In order to evaluate the performance 
 print('Mean Absolute Error:', 
       metrics.mean_absolute_error(y_test, y_pred)) 
-plt.plot(x_test,y_pred,'r')
-plt.legend(['Predicted Data','Testing Data'])
-plt.xlabel('Hours Studied')  
-plt.ylabel('Percentage Score')
-plt.show()
-
-# Comparing Actual vs Predicted
-df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})  
-print(df) 
-
-hours = 9.25
-own_pred = regressor.predict([[hours]])
-print("No of Hours = {}".format(hours))
-print("Predicted Score = {}".format(own_pred[0]))
-
-#In order to evaluate the performance 
-print('Mean Absolute Error:', 
-      metrics.mean_absolute_error(y_test, y_pred)) 
